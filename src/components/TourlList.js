@@ -16,7 +16,7 @@ function TourlList() {
     <div>
       <h1 className="title">Your Tours</h1>
         {
-            loading ? <p>Loading</p> :
+            loading ? <p className="loading">Loading</p> :
             <div className="tours__container">
                 {
                     tours.length !== 0 
