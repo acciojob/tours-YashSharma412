@@ -10,3 +10,9 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+.title{
+    text-align: center;
+    margin: 10px;
+    font-size: 32px;
+}
