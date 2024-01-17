@@ -22,6 +22,7 @@ function SingleTour({ tour, tours,  setTours }) {
           {showFullDesc ? tour.info : `${tour.info.slice(0, 200)}...`}
           <button
             className="show__more&less"
+            id={`see-more-${tour.id}`}
             onClick={() => setShowFullDesc(!showFullDesc)}
           >
             <u>{showFullDesc ? "Show less" : "Show more"}</u>
