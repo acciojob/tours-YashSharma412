@@ -18,19 +18,19 @@ function SingleTour({ tour, tours,  setTours }) {
       <h3>{tour.name}</h3>
       <img src={tour.image} alt={`${tour.name}`} />
       <div>
-        <p className="tour-info">
+        <p className="tour-info" id={`tour-item-para-${tour.id}`}>
           {showFullDesc ? tour.info : `${tour.info.slice(0, 200)}...`}
-          <b
+          <button
             className="show__more&less"
             onClick={() => setShowFullDesc(!showFullDesc)}
           >
             <u>{showFullDesc ? "Show less" : "Show more"}</u>
-          </b>
+          </button>
         </p>
       </div>
       <div style={dispFlex}>
         <h5 className="tour-price">Price: {tour.price}</h5>
-        <button className="delete-btn" onClick={() => handleDelete(tour)}>
+        <button className="delete-btn" id={`delete-btn-${tour.id}`} onClick={() => handleDelete(tour)}>
           Delete Tour
         </button>
       </div>
